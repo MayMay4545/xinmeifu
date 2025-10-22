@@ -14,65 +14,63 @@
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Google fonts (替换为Apple风格无衬线字体) -->
+    <!-- 字体替换为Apple学术常用无衬线字体 -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Core theme CSS (includes Bootstrap)-->
+    <!-- Core CSS -->
     <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
     <link type="text/css" href="static/css/main.css" rel="stylesheet" />
 
-    <!-- 自定义Apple学术风格CSS -->
+    <!-- Apple学术风格核心样式（去婚礼感） -->
     <style>
-        /* 全局样式重置 */
+        /* 1. 色彩系统重构（移除粉色，改用学术灰蓝） */
         :root {
             --apple-white: #ffffff;
-            --apple-gray-50: #f9fafb;
-            --apple-gray-100: #f3f4f6;
-            --apple-gray-200: #e5e7eb;
-            --apple-accent: #0071e3; /* Apple蓝（学术风格常用） */
-            --apple-text: #1d1d1f;
-            --apple-text-light: #6e6e73;
-            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.04);
+            --apple-gray-50: #f5f7fa; /* 更浅的背景灰 */
+            --apple-gray-100: #eaeef2; /* 区块分隔灰 */
+            --apple-gray-200: #dce1e8; /* 边框灰 */
+            --apple-accent: #0066cc; /* 学术蓝（替代粉色） */
+            --apple-text: #1c1c1e; /* 主文本色 */
+            --apple-text-light: #636366; /* 次要文本色 */
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08); /* 更淡的阴影 */
         }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--apple-text);
             background-color: var(--apple-gray-50);
-            line-height: 1.6;
+            line-height: 1.7; /* 提升学术文本可读性 */
         }
 
-        /* 导航栏样式 */
+        /* 2. 导航栏去粉色化 */
         #mainNav {
             background-color: var(--apple-white);
             box-shadow: var(--shadow-sm);
-            padding: 1rem 0;
+            padding: 0.8rem 0; /* 更紧凑的导航 */
         }
 
         #mainNav .navbar-brand {
             color: var(--apple-text);
             font-weight: 600;
-            font-size: 1.25rem;
         }
 
         #mainNav .nav-link {
             color: var(--apple-text-light);
-            margin-left: 1.5rem;
-            font-weight: 500;
+            margin-left: 1.2rem;
             transition: color 0.2s ease;
         }
 
         #mainNav .nav-link:hover,
         #mainNav .nav-link.active {
-            color: var(--apple-accent);
+            color: var(--apple-accent); /* 蓝色调活跃状态 */
         }
 
-        /* 顶部区域样式 */
+        /* 3. 顶部区域去婚礼感（关键修改） */
         .top-section {
-            height: 50vh;
-            min-height: 400px;
+            height: 45vh; /* 降低高度，减少视觉占比 */
+            min-height: 350px;
+            background-image: url('static/assets/img/academic-bg.jpg'); /* 替换为学术风背景（如淡灰渐变/简约几何） */
             background-size: cover;
             background-position: center;
             position: relative;
@@ -82,98 +80,79 @@
         }
 
         .top-section:before {
-            display: none; /* 彻底移除覆盖层 */
-        }
-
-        .top-section-content {
-            text-align: center;
-            padding: 2rem;
+            display: none; /* 彻底移除粉色覆盖层 */
         }
 
         #top-section-bg-text {
-            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-size: clamp(1.8rem, 5vw, 3rem);
             font-weight: 600;
-            color: var(--apple-text);
-            letter-spacing: -0.02em;
-            margin: 0;
+            color: var(--apple-text); /* 黑色文本替代白色，更学术 */
+            letter-spacing: -0.01em;
         }
 
-        /* 头像样式 */
+        /* 4. 头像区域调整 */
         #avatar {
-            display: flex;
-            justify-content: center;
-            margin-top: -6rem;
-            padding-bottom: 2rem;
+            margin-top: -5rem; /* 减少上浮距离 */
         }
 
         #avatar img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid var(--apple-white);
-            box-shadow: var(--shadow-md);
+            width: 110px;
+            height: 110px;
+            border: 3px solid var(--apple-white);
+            box-shadow: var(--shadow-sm);
         }
 
-        /* 内容区块通用样式 */
+        /* 5. 内容区块去粉色卡片化 */
         section {
             background-color: var(--apple-white);
-            border-radius: 12px;
+            border-radius: 8px; /* 更内敛的圆角 */
             box-shadow: var(--shadow-sm);
-            padding: 3rem 2rem;
-            margin-bottom: 3rem;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
             max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            border: 1px solid var(--apple-gray-100); /* 细边框增强学术感 */
         }
 
         section header h2 {
-            font-size: 1.75rem;
+            font-size: 1.6rem;
             font-weight: 600;
             color: var(--apple-text);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             padding-bottom: 0.5rem;
             border-bottom: 1px solid var(--apple-gray-200);
         }
 
-        /* 内容文本样式 */
-        .main-body {
-            font-size: 1.05rem;
-            color: var(--apple-text);
-        }
-
-        .main-body p {
+        /* 6. 论文区块去粉色背景 */
+        .publication-item {
+            padding: 1.2rem;
+            border-radius: 6px;
+            background-color: var(--apple-gray-50); /* 浅灰背景替代粉色 */
             margin-bottom: 1rem;
-            line-height: 1.7;
+            border-left: 3px solid var(--apple-accent); /* 蓝色左侧标识 */
+            transition: all 0.2s ease;
         }
 
-        .main-body a {
+        .publication-item:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* 7. 链接与交互元素调整 */
+        a {
             color: var(--apple-accent);
             text-decoration: none;
         }
 
-        .main-body a:hover {
+        a:hover {
+            color: #0052aa;
             text-decoration: underline;
         }
 
-        /*  publications 卡片样式 */
-        .publication-item {
-            padding: 1.5rem;
-            border-radius: 8px;
-            background-color: var(--apple-gray-50);
-            margin-bottom: 1.25rem;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .publication-item:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-
-        /* 页脚样式 */
+        /* 8. 页脚去粉色 */
         footer {
             background-color: var(--apple-gray-100);
-            padding: 3rem 0;
-            margin-top: 3rem;
+            padding: 2.5rem 0;
+            margin-top: 2rem;
         }
 
         #copyright-text {
@@ -181,33 +160,22 @@
             font-size: 0.9rem;
         }
 
-        footer a {
-            color: var(--apple-accent);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* 响应式调整 */
+        /* 9. 响应式优化 */
         @media (max-width: 768px) {
             section {
-                padding: 2rem 1rem;
-                margin-left: 1rem;
-                margin-right: 1rem;
+                padding: 1.8rem 1rem;
+                margin-left: 0.8rem;
+                margin-right: 0.8rem;
             }
 
             #top-section-bg-text {
-                font-size: clamp(1.5rem, 5vw, 2.5rem);
+                font-size: clamp(1.5rem, 5vw, 2.2rem);
             }
         }
     </style>
 
-    <!-- Bootstrap core JS-->
+    <!-- 脚本部分保持不变 -->
     <script type="text/javascript" src="static/js/bootstrap.bundle.min.js"></script>
-
-    <!-- 其他脚本保持不变 -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script type="text/javascript" src="static/js/marked.min.js"></script>
     <script>
@@ -241,7 +209,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#awards">AWARDS</a>
                     </li>
-                    <li class="nav-item" style="display: none;"> <!-- 保持隐藏工作经历 -->
+                    <li class="nav-item" style="display: none;">
                         <a class="nav-link" href="#experience">EXPERIENCE</a>
                     </li>
                     <li class="nav-item">
@@ -252,8 +220,8 @@
         </div>
     </nav>
 
-    <!-- Top Section (使用简约背景) -->
-    <section class="top-section" style="background-image: url('static/assets/img/apple-academic-bg.jpg');">
+    <!-- Top Section（已去婚礼感） -->
+    <section class="top-section">
         <div class="top-section-content">
             <div class="container px-5">
                 <h2 id="top-section-bg-text" class="display-3 lh-1"></h2>
@@ -313,3 +281,4 @@
 </body>
 
 </html>
+    
