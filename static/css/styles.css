@@ -1825,13 +1825,17 @@ progress {
 
 .table-primary {
   --bs-table-color: #000;
-  --bs-table-bg: #d4d7fc;
-  --bs-table-border-color: #bfc2e3;
-  --bs-table-striped-bg: #c9ccef;
+  --bs-table-bg: #fce4ec;
+  /* --bs-table-bg: #d4d7fc; */
+  --bs-table-border-color: #ffd1dc;
+  /* --bs-table-border-color: #bfc2e3; */
+  --bs-table-striped-bg: #f8eaf1;
+  /* --bs-table-striped-bg: #c9ccef; */
   --bs-table-striped-color: #000;
   --bs-table-active-bg: #bfc2e3;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #c4c7e9;
+  --bs-table-hover-bg: #f5d7e2;
+  /* --bs-table-hover-bg: #c4c7e9; */
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -2031,9 +2035,11 @@ progress {
 .form-control:focus {
   color: #212529;
   background-color: #fff;
-  border-color: #949bf8;
+  border-color: #ffd1dc;
+  /* border-color: #949bf8; */
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(41, 55, 240, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(255, 209, 220, 0.25);
+  /* box-shadow: 0 0 0 0.25rem rgba(41, 55, 240, 0.25); */
 }
 .form-control::-webkit-date-and-time-value {
   height: 1.5em;
@@ -2855,15 +2861,22 @@ textarea.form-control-lg {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #2937f0;
-  --bs-btn-border-color: #2937f0;
+  --bs-btn-bg: #ffd1dc;
+  /* --bs-btn-bg: #2937f0; */
+  --bs-btn-border-color: #ffd1dc;
+  /* --bs-btn-border-color: #2937f0; */
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #232fcc;
-  --bs-btn-hover-border-color: #212cc0;
-  --bs-btn-focus-shadow-rgb: 73, 85, 242;
+  --bs-btn-hover-bg: #f8bbd0;
+  /* --bs-btn-hover-bg: #232fcc; */
+  --bs-btn-hover-border-color: #f8bbd0;
+  /* --bs-btn-hover-border-color: #212cc0; */
+  --bs-btn-focus-shadow-rgb: 255, 209, 220;
+  /* --bs-btn-focus-shadow-rgb: 73, 85, 242; */
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #212cc0;
-  --bs-btn-active-border-color: #1f29b4;
+  --bs-btn-active-bg: #f48fb1;
+  /* --bs-btn-active-bg: #212cc0; */
+  --bs-btn-active-border-color: #f48fb1;
+  /* --bs-btn-active-border-color: #1f29b4; */
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #2937f0;
@@ -4163,7 +4176,9 @@ textarea.form-control-lg {
   --bs-card-spacer-x: 1rem;
   --bs-card-title-spacer-y: 0.5rem;
   --bs-card-border-width: 1px;
-  --bs-card-border-color: var(--bs-border-color-translucent);
+  --bs-card-border-color: #fce4ec;
+  /* --bs-card-border-color: var(--bs-border-color-translucent); */
+  --bs-card-hover-border-color: #ffd1dc;
   --bs-card-border-radius: 0.375rem;
   --bs-card-box-shadow: ;
   --bs-card-inner-border-radius: calc(0.375rem - 1px);
@@ -10847,7 +10862,8 @@ html {
 }
 
 .text-gradient {
-  background: -webkit-linear-gradient(#2937f0, #9f1ae2);
+  background: -webkit-linear-gradient(#ffd1dc, #f48fb1);
+  /* background: -webkit-linear-gradient(#2937f0, #9f1ae2); */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -10872,7 +10888,8 @@ section {
   font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 #mainNav .navbar-brand:hover, #mainNav .navbar-brand:active {
-  color: #2937f0;
+  color: #f48fb1; /* 品牌名 hover 粉色 */
+  /* color: #2937f0; */
 }
 #mainNav .navbar-toggler {
   font-size: 0.875rem;
@@ -10884,11 +10901,12 @@ section {
   color: #212529;
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover {
-
-   color: var(--bs-blue)
+  color: #f48fb1; /* 导航链接 hover 粉色 */
+   /* color: var(--bs-blue) */
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #2937f0;
+  color: #f48fb1; /* 活跃导航项粉色 */
+  /* color: #2937f0; */
 }
 
 

@@ -2,7 +2,14 @@
 
 
 :root{
-    --h-title-color:#3948d2;
+    --bs-primary: #ffd1dc; /* 浅粉色主色调 */
+    --bs-primary-rgb: 255, 209, 220;
+    --bs-secondary: #fce4ec; /* 更浅的粉色 */
+    --bs-secondary-rgb: 252, 228, 236;
+    --bs-link-color: #f8bbd0; /* 链接粉色 */
+    --bs-link-hover-color: #f48fb1; /* 链接 hover 色 */
+    --h-title-color: #f48fb1; /* 标题粉色（替换main.css中的变量） */
+    /* --h-title-color:#3948d2; */
 }
 
 .header {
