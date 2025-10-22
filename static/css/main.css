@@ -45,7 +45,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent; /* 完全移除覆盖层，背景图清晰显示 */
+    /* background: rgba(0, 0, 0, 0.5);黑色覆盖层 */
 }
 
 section header h2{
