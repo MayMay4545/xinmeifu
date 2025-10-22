@@ -10927,6 +10927,19 @@ footer a:hover, footer a:active, footer a:focus {
   text-decoration: underline;
 }
 
+/* 1. 强制头像显示为圆形 */
+#avatar img {
+  border-radius: 50% !important; /* 强制圆形，!important确保覆盖其他样式 */
+  object-fit: cover; /* 避免图片拉伸变形 */
+}
 
+/* 2. 修复页面内容纵向居中与布局 */
+/* 顶部区域居中优化 */
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45vh; /* 保持合适高度 */
+}
 
 
