@@ -9,7 +9,7 @@ I have a Master's degree in Computer Technology at the Department of Information
 **Capital Normal University**, Master of Computer Technology (2018 – 2021)  
 • GPA: 3.75 
 
-**Tianjin University of Science and Technology**, Honours Bachelor of Internet of Things Engineering (2014 – 2018)  
+**Tianjin University of Science and Technology**, Bachelor of Internet of Things Engineering (2014 – 2018)  
 • GPA: 3.98 (top 1%)  
 
 #### Research Interests  
